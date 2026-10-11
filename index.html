@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <title>Free Drive</title>
+    <style>
+      :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+      * { box-sizing: border-box; user-select: none; -webkit-user-select: none; }
+      html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #9bc3d5; overscroll-behavior: none; touch-action: none; }
+      canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+      .hud { position: fixed; inset: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); pointer-events: none; }
+      .speed { position: absolute; top: 16px; left: 18px; font-weight: 700; font-size: clamp(22px, 5vw, 36px); text-shadow: 0 2px 5px #1238; }
+      .debug { position: absolute; top: 12px; right: 14px; font-size: 12px; }
+      .controls { position: fixed; inset: auto env(safe-area-inset-right) calc(12px + env(safe-area-inset-bottom)) env(safe-area-inset-left); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding: 0 14px; pointer-events: none; }
+      .pad { display: grid; grid-template-columns: repeat(2, 64px); gap: 10px; }
+      button { pointer-events: auto; min-width: 64px; min-height: 64px; border: 1px solid #fff8; border-radius: 16px; background: #17262dcc; color: white; font: 700 15px system-ui; touch-action: none; }
+    </style>
+  </head>
+  <body><script type="module" src="./src/main.ts"></script></body>
+</html>
